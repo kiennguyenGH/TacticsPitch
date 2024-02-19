@@ -29,12 +29,13 @@ offset_bottom = 399.0
 text = "Quit"
 metadata/_edit_use_anchors_ = true
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="Title Text" type="TextEdit" parent="."]
 offset_left = -18.0
 offset_top = -65.0
 offset_right = 294.0
 offset_bottom = 25.0
 text = "FRONTLINE TACTICS"
+placeholder_text = "FRONTLINE TACTICS"
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
 [connection signal="pressed" from="Settings" to="Play" method="_on_settings_pressed"]
