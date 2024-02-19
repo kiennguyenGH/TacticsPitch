@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://bop0p3iw1tvon"]
+[gd_scene load_steps=2 format=3 uid="uid://bhksnsvtv27uk"]
 
-[node name="Node" type="Node"]
+[ext_resource type="Script" path="res://Play.gd" id="1_espiu"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(415, 165)
+
+[node name="Play" type="Button" parent="."]
+offset_top = 64.0
+offset_right = 260.0
+offset_bottom = 163.0
+text = "Play"
+script = ExtResource("1_espiu")
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 3.0
+offset_top = 183.0
+offset_right = 263.0
+offset_bottom = 282.0
+text = "Settings"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 2.0
+offset_top = 300.0
+offset_right = 262.0
+offset_bottom = 399.0
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = -18.0
+offset_top = -65.0
+offset_right = 294.0
+offset_bottom = 25.0
+placeholder_text = "FRONTLINE TACTICS"
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Settings" to="Play" method="_on_settings_pressed"]
+[connection signal="pressed" from="Quit" to="Play" method="_on_quit_pressed"]
