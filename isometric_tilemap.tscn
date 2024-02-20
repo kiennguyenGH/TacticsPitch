@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dov704m20dflf"]
+
+[sub_resource type="TileSet" id="TileSet_g0tbj"]
+tile_shape = 1
+tile_size = Vector2i(32, 16)
+
+[node name="Isometric Tilemap" type="TileMap"]
+tile_set = SubResource("TileSet_g0tbj")
+format = 2
