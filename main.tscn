@@ -37,6 +37,30 @@ offset_bottom = 25.0
 text = "FRONTLINE TACTICS"
 placeholder_text = "FRONTLINE TACTICS"
 
+[node name="Settings2" type="Node2D" parent="."]
+
+[node name="Video" type="Button" parent="Settings2"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button" type="Button" parent="Settings2/Video"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Audio" type="Button" parent="Settings2"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button" type="Button" parent="Settings2/Audio"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Back" type="Button" parent="Settings2"]
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
 [connection signal="pressed" from="Settings" to="Play" method="_on_settings_pressed"]
 [connection signal="pressed" from="Quit" to="Play" method="_on_quit_pressed"]
