@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn2r7xgh7uych"]
+
+[ext_resource type="PackedScene" uid="uid://dov704m20dflf" path="res://isometric_tilemap.tscn" id="1_fkluk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Isometric Tilemap" parent="." instance=ExtResource("1_fkluk")]
