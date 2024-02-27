@@ -1,0 +1,131 @@
+[gd_scene load_steps=3 format=3 uid="uid://7kekvr03xmnw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca8h1"]
+bg_color = Color(0.792157, 0.537255, 0.239216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07vm8"]
+bg_color = Color(0, 0.843137, 0.760784, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Character Panel" type="Panel" parent="."]
+show_behind_parent = true
+anchors_preset = -1
+anchor_right = 0.42
+offset_left = 3.0
+offset_top = 489.0
+offset_right = 846.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ca8h1")
+
+[node name="Avatar Border" type="Panel" parent="Character Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -65.0
+offset_right = 158.0
+offset_bottom = 66.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_07vm8")
+
+[node name="TextureRect" type="TextureRect" parent="Character Panel/Avatar Border"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -57.5
+offset_right = 60.0
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stats" type="Label" parent="Character Panel"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 51.0
+offset_right = 337.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 23
+text = "Stats:"
+
+[node name="stat1" type="Label" parent="Character Panel/Stats"]
+offset_left = 17.0
+offset_top = 32.0
+offset_right = 178.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 23
+text = "Stat 1:"
+
+[node name="stat1#" type="Label" parent="Character Panel/Stats/stat1"]
+layout_mode = 1
+offset_left = 80.0
+offset_right = 241.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 23
+text = "x"
+
+[node name="stat2" type="Label" parent="Character Panel/Stats"]
+offset_left = 18.0
+offset_top = 66.0
+offset_right = 179.0
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 23
+text = "Stat 2: "
+
+[node name="stat2#" type="Label" parent="Character Panel/Stats/stat2"]
+offset_left = 79.0
+offset_top = -3.0
+offset_right = 240.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 23
+text = "x"
+
+[node name="Attack" type="Button" parent="Character Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -48.5
+offset_right = 77.5
+offset_bottom = 48.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Attack"
+
+[node name="Move" type="Button" parent="Character Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 128.5
+offset_top = -48.5
+offset_right = 227.5
+offset_bottom = 48.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Move"
+
+[node name="Wait" type="Button" parent="Character Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 278.5
+offset_top = -48.5
+offset_right = 377.5
+offset_bottom = 48.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wait"
