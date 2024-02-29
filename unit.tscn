@@ -36,4 +36,5 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dpfgi")
 animation = &"Idle"
-frame_progress = 0.59514
+autoplay = "Idle"
+frame_progress = 0.364091
