@@ -38,3 +38,4 @@ sprite_frames = SubResource("SpriteFrames_dpfgi")
 animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.364091
+offset = Vector2(0, -12)

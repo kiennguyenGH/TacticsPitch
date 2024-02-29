@@ -16,4 +16,4 @@ func _input(event):
 			print(mouse_pos)
 			print(tile_mouse_pos)
 			print(pos2)
-			position = Vector2(pos2.x, pos2.y-12)
+			position = Vector2(pos2.x, pos2.y)
