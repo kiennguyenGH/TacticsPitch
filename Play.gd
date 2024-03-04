@@ -17,3 +17,7 @@ func _on_settings_pressed():
 ##test
 func _on_character_ui_test_pressed():
 	get_tree().change_scene_to_file("res://UiTest.tscn")
+
+
+func _on_movement_test_pressed():
+	get_tree().change_scene_to_file("res://isometric_test.tscn")
