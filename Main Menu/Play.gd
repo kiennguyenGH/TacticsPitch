@@ -11,8 +11,7 @@ func _on_quit_pressed():
 
 ## settings button
 func _on_settings_pressed():
-	pass # Replace with function body.
-## idk something will happen, will figure out later
+	get_tree().change_scene_to_file("res://Main Menu/Options.tscn")
 
 ##test
 func _on_character_ui_test_pressed():
