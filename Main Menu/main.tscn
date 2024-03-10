@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhksnsvtv27uk"]
+
+[ext_resource type="Script" path="res://Main Menu/Play.gd" id="1_aj2a5"]
+
+[node name="Menu" type="Node2D"]
+position = Vector2(415, 165)
+
+[node name="Character Ui test" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = -1.02743
+anchor_top = 0.0464567
+anchor_right = -1.02743
+anchor_bottom = 0.0464567
+offset_left = -267.0
+offset_top = 69.0
+offset_right = -128.0
+offset_bottom = 160.0
+text = "Character UI test
+"
+
+[node name="Movement Test" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = -1.02743
+anchor_top = 0.0464567
+anchor_right = -1.02743
+anchor_bottom = 0.0464567
+offset_left = -269.0
+offset_top = 180.0
+offset_right = -123.0
+offset_bottom = 271.0
+text = "Movement test
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+script = ExtResource("1_aj2a5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Character Ui test" to="MarginContainer/VBoxContainer/Play" method="_on_character_ui_test_pressed"]
+[connection signal="pressed" from="Movement Test" to="MarginContainer/VBoxContainer/Play" method="_on_movement_test_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="MarginContainer/VBoxContainer/Play" method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="MarginContainer/VBoxContainer/Play" method="_on_quit_pressed"]
