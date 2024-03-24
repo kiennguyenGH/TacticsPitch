@@ -54,6 +54,7 @@ theme_override_font_sizes/font_size = 23
 text = "Stats:"
 
 [node name="stat1" type="Label" parent="Character Panel/Stats"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 32.0
 offset_right = 178.0
@@ -70,6 +71,7 @@ theme_override_font_sizes/font_size = 23
 text = "x"
 
 [node name="stat2" type="Label" parent="Character Panel/Stats"]
+layout_mode = 0
 offset_left = 18.0
 offset_top = 66.0
 offset_right = 179.0
@@ -78,6 +80,7 @@ theme_override_font_sizes/font_size = 23
 text = "Stat 2: "
 
 [node name="stat2#" type="Label" parent="Character Panel/Stats/stat2"]
+layout_mode = 0
 offset_left = 79.0
 offset_top = -3.0
 offset_right = 240.0

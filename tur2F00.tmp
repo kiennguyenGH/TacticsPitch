@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm80d30bl6w63"]
+
+[ext_resource type="Script" path="res://turn_test.gd" id="1_tuodu"]
+[ext_resource type="PackedScene" uid="uid://dov704m20dflf" path="res://isometric_tilemap.tscn" id="2_dolmi"]
+[ext_resource type="PackedScene" uid="uid://bj51khuo5aypt" path="res://unit.tscn" id="3_8w6dw"]
+[ext_resource type="Script" path="res://unit.gd" id="4_5ky11"]
+
+[node name="turn_test" type="Node2D"]
+script = ExtResource("1_tuodu")
+
+[node name="Field" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="Field"]
+position = Vector2(117, 6)
+zoom = Vector2(2, 2)
+
+[node name="Isometric Tilemap" parent="Field" instance=ExtResource("2_dolmi")]
+layer_1/tile_data = PackedInt32Array()
+
+[node name="unit_1" parent="Field" instance=ExtResource("3_8w6dw")]
+position = Vector2(96, 4)
+script = ExtResource("4_5ky11")
+
+[node name="unit_2" parent="Field" instance=ExtResource("3_8w6dw")]
+position = Vector2(50, 27)
+script = ExtResource("4_5ky11")
+
+[node name="unit_3" parent="Field" instance=ExtResource("3_8w6dw")]
+position = Vector2(113, 40)
+script = ExtResource("4_5ky11")
+
+[node name="turn_order" type="Node2D" parent="Field"]
+
+[node name="Move" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 201.0
+offset_top = 69.0
+offset_right = 300.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Move"
+
+[node name="Wait" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 304.0
+offset_top = 69.0
+offset_right = 403.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wait"
+
+[connection signal="pressed" from="Move" to="." method="_on_move_pressed"]
+[connection signal="pressed" from="Wait" to="." method="_on_wait_pressed"]
