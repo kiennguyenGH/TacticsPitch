@@ -14,6 +14,7 @@ var current_hp = max_hp # Current health points
 var attack = 10 # Attack power
 var speed = 5 # Determines turn order
 var movement_range = 3 # How many tiles the character can move in one turn
+@onready var _focus = $Focus
 
 # Constructor to initialize a character with custom stats
 func _init(_character_name , _max_hp, _attack, _speed, _movement_range):
@@ -40,6 +41,12 @@ func attack_target(target : Character):
 # Method to check if the character is alive (HP > 0)
 func is_alive():
 	return current_hp > 0
+	
+func focus():
+	_focus.show()
+	
+func unfocus():
+	_focus.hide()
 
 # vvvvvvvvvvvv Information on how to utilize this script with mutiple characters: vvvvvvvvvvv
 # --------------------------------------------------------------------------------------------
