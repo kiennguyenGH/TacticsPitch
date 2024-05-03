@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://mh6bp4gy6vmk"]
+
+[ext_resource type="Script" path="res://Main Menu/Options.gd" id="1_6o8vl"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(415, 165)
+script = ExtResource("1_6o8vl")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Volume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Display" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Display"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
