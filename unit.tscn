@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bj51khuo5aypt"]
+[gd_scene load_steps=8 format=3 uid="uid://bj51khuo5aypt"]
 
+[ext_resource type="Script" path="res://unit.gd" id="1_q027k"]
 [ext_resource type="Texture2D" uid="uid://d3a87064q13qq" path="res://unit.png" id="1_qpvne"]
+[ext_resource type="Texture2D" path="res://unit_arrow.png" id="3_br0av"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_motyo"]
 atlas = ExtResource("1_qpvne")
@@ -32,10 +34,16 @@ animations = [{
 }]
 
 [node name="Unit" type="Node2D"]
+script = ExtResource("1_q027k")
 
-[node name="Unit Animation" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dpfgi")
 animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.364091
 offset = Vector2(0, -12)
+
+[node name="Focus" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -32)
+texture = ExtResource("3_br0av")

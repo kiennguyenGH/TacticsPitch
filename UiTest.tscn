@@ -17,6 +17,7 @@ offset_top = 489.0
 offset_right = 846.0
 offset_bottom = 647.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ca8h1")
+metadata/_edit_use_anchors_ = true
 
 [node name="Avatar Border" type="Panel" parent="Character Panel"]
 layout_mode = 1
@@ -29,6 +30,7 @@ offset_right = 158.0
 offset_bottom = 66.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_07vm8")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="Character Panel/Avatar Border"]
 layout_mode = 1
@@ -43,6 +45,7 @@ offset_right = 60.0
 offset_bottom = 57.5
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Stats" type="Label" parent="Character Panel"]
 layout_mode = 0
@@ -52,6 +55,7 @@ offset_right = 337.0
 offset_bottom = 94.0
 theme_override_font_sizes/font_size = 23
 text = "Stats:"
+metadata/_edit_use_anchors_ = true
 
 [node name="stat1" type="Label" parent="Character Panel/Stats"]
 layout_mode = 0
@@ -61,6 +65,7 @@ offset_right = 178.0
 offset_bottom = 75.0
 theme_override_font_sizes/font_size = 23
 text = "Stat 1:"
+metadata/_edit_use_anchors_ = true
 
 [node name="stat1#" type="Label" parent="Character Panel/Stats/stat1"]
 layout_mode = 1
@@ -69,6 +74,7 @@ offset_right = 241.0
 offset_bottom = 43.0
 theme_override_font_sizes/font_size = 23
 text = "x"
+metadata/_edit_use_anchors_ = true
 
 [node name="stat2" type="Label" parent="Character Panel/Stats"]
 layout_mode = 0
@@ -78,6 +84,7 @@ offset_right = 179.0
 offset_bottom = 109.0
 theme_override_font_sizes/font_size = 23
 text = "Stat 2: "
+metadata/_edit_use_anchors_ = true
 
 [node name="stat2#" type="Label" parent="Character Panel/Stats/stat2"]
 layout_mode = 0
@@ -87,6 +94,7 @@ offset_right = 240.0
 offset_bottom = 40.0
 theme_override_font_sizes/font_size = 23
 text = "x"
+metadata/_edit_use_anchors_ = true
 
 [node name="Attack" type="Button" parent="Character Panel"]
 layout_mode = 1
@@ -102,6 +110,7 @@ offset_bottom = 48.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Attack"
+metadata/_edit_use_anchors_ = true
 
 [node name="Move" type="Button" parent="Character Panel"]
 layout_mode = 1
@@ -117,6 +126,7 @@ offset_bottom = 48.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Move"
+metadata/_edit_use_anchors_ = true
 
 [node name="Wait" type="Button" parent="Character Panel"]
 layout_mode = 1
@@ -132,3 +142,4 @@ offset_bottom = 48.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Wait"
+metadata/_edit_use_anchors_ = true

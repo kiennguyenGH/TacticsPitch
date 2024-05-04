@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dov704m20dflf" path="res://isometric_tilemap.tscn" id="1_fkluk"]
 [ext_resource type="PackedScene" uid="uid://bj51khuo5aypt" path="res://unit.tscn" id="2_mjhku"]
-[ext_resource type="Script" path="res://unit.gd" id="3_uhxgh"]
+[ext_resource type="Script" path="res://units.gd" id="3_1pxk0"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,6 +13,59 @@ zoom = Vector2(2, 2)
 [node name="Isometric Tilemap" parent="." instance=ExtResource("1_fkluk")]
 layer_1/tile_data = PackedInt32Array()
 
+<<<<<<< Updated upstream
 [node name="Unit" parent="." instance=ExtResource("2_mjhku")]
 position = Vector2(96, 4)
 script = ExtResource("3_uhxgh")
+=======
+[node name="Units" type="Node2D" parent="."]
+script = ExtResource("3_1pxk0")
+
+[node name="Unit" parent="Units" instance=ExtResource("2_mjhku")]
+position = Vector2(144, 19)
+
+[node name="Attack" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 216.0
+offset_top = 198.5
+offset_right = 315.0
+offset_bottom = 295.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Attack"
+metadata/_edit_use_anchors_ = true
+
+[node name="Move" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 366.0
+offset_top = 198.5
+offset_right = 465.0
+offset_bottom = 295.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Move"
+metadata/_edit_use_anchors_ = true
+
+[node name="Wait" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 516.0
+offset_top = 198.5
+offset_right = 615.0
+offset_bottom = 295.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wait"
+metadata/_edit_use_anchors_ = true
+>>>>>>> Stashed changes
