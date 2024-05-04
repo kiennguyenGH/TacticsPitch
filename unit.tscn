@@ -117,7 +117,7 @@ script = ExtResource("1_k0v8t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dpfgi")
-animation = &"UpRight"
+animation = &"DownLeft"
 autoplay = "DownLeft"
 offset = Vector2(0, -12)
 
