@@ -14,15 +14,24 @@ var current_hp = max_hp # Current health points
 var attack = 10 # Attack power
 var speed = 5 # Determines turn order
 var movement_range = 3 # How many tiles the character can move in one turn
+@onready var _focus = $Focus
+@onready var _sprite = $AnimatedSprite2D
+
 
 # Constructor to initialize a character with custom stats
-func _init(_character_name , _max_hp, _attack, _speed, _movement_range):
-	character_name  = _character_name 
-	max_hp = _max_hp
-	current_hp = max_hp
-	attack = _attack
-	speed = _speed
-	movement_range = _movement_range
+#func _init(_character_name , _max_hp, _attack, _speed, _movement_range):
+	#character_name  = _character_name 
+	#max_hp = _max_hp
+	#current_hp = max_hp
+	#attack = _attack
+	#speed = _speed
+	#movement_range = _movement_range
+	
+func focus():
+	_focus.show()
+
+func unfocus():
+	_focus.hide()
 
 # Method for taking damage, reducing HP and checking for defeat
 func take_damage(amount):
@@ -33,13 +42,16 @@ func take_damage(amount):
 		print(character_name  + " has been defeated!") 
 		#different method can be implmented here based on how we want to handle defeat
 
-# Method for attacking another character, triggering their take_damage method
+ #Method for attacking another character, triggering their take_damage method
 func attack_target(target : Character):
 	target.take_damage(attack)
 
 # Method to check if the character is alive (HP > 0)
 func is_alive():
 	return current_hp > 0
+	
+func set_animation(name):
+	_sprite.play(name)
 
 # vvvvvvvvvvvv Information on how to utilize this script with mutiple characters: vvvvvvvvvvv
 # --------------------------------------------------------------------------------------------
