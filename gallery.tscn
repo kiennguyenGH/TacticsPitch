@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=3 uid="uid://c5o5twvbdlpdw"]
+
+[ext_resource type="Texture2D" uid="uid://23lbw2qd5i30" path="res://Enemy-Sheet.png" id="2_37lif"]
+[ext_resource type="Texture2D" uid="uid://d3a87064q13qq" path="res://unit.png" id="3_d0s1l"]
+[ext_resource type="Texture2D" uid="uid://51x0c8ohlvsw" path="res://Gallery/empty.jpg" id="4_o3oii"]
+[ext_resource type="Texture2D" uid="uid://duqh67gntoqvq" path="res://Gallery/full.jpg" id="4_t1vld"]
+[ext_resource type="Texture2D" uid="uid://c6crn5nohpt0m" path="res://Gallery/gamepitch.png" id="5_herae"]
+[ext_resource type="Texture2D" uid="uid://vis2pp147rhr" path="res://Gallery/half.jpg" id="5_qyqct"]
+[ext_resource type="Texture2D" uid="uid://ds5ornutjlxy8" path="res://Gallery/Illustrationalt.png" id="6_c2d30"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="6_dtumt"]
+[ext_resource type="Texture2D" uid="uid://bqgv6u8l583df" path="res://Gallery/image.png" id="8_57ixd"]
+[ext_resource type="Texture2D" uid="uid://bo44pgtiva0tk" path="res://Gallery/sketchbook.png" id="9_hrkbt"]
+[ext_resource type="Texture2D" uid="uid://s8lacvujc3uy" path="res://Gallery/imagejan.png" id="10_7dow6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvl1w"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(750, 316)
+scale = Vector2(2.94881, 2.94881)
+texture = ExtResource("2_37lif")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(783, 105)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("3_d0s1l")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(26, 542)
+scale = Vector2(0.156247, 0.156247)
+texture = ExtResource("4_o3oii")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(-808, 537)
+scale = Vector2(0.156247, 0.156247)
+texture = ExtResource("4_t1vld")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(-1719, 537)
+scale = Vector2(0.156247, 0.156247)
+texture = ExtResource("5_qyqct")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(807, 970)
+scale = Vector2(0.276247, 0.276247)
+texture = ExtResource("6_c2d30")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1671, 379)
+scale = Vector2(0.316242, 0.316242)
+texture = ExtResource("5_herae")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(1510, 1200)
+scale = Vector2(2.07624, 2.07624)
+texture = ExtResource("8_57ixd")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(-15, 1577)
+scale = Vector2(2.55624, 2.55624)
+texture = ExtResource("9_hrkbt")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(3122, 901)
+scale = Vector2(2.39624, 2.39624)
+texture = ExtResource("10_7dow6")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-2124, 22)
+script = ExtResource("6_dtumt")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(565, 289)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_qvl1w")

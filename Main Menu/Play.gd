@@ -2,7 +2,7 @@ extends Button
 
 ## play button
 func _on_pressed():
-	get_tree().change_scene_to_file("res://leveltest.tscn")
+	get_tree().change_scene_to_file("res://isometric_test.tscn")
 
 
 ## quit button
@@ -20,3 +20,7 @@ func _on_character_ui_test_pressed():
 
 func _on_movement_test_pressed():
 	get_tree().change_scene_to_file("res://isometric_test.tscn")
+
+
+func _on_gallery_pressed():
+	get_tree().change_scene_to_file("res://gallery.tscn")

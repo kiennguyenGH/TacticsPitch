@@ -31,6 +31,18 @@ offset_bottom = 271.0
 text = "Movement test
 "
 
+[node name="Gallery" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = -1.02743
+anchor_top = 0.0464567
+anchor_right = -1.02743
+anchor_bottom = 0.0464567
+offset_left = -268.0
+offset_top = -44.0
+offset_right = -122.0
+offset_bottom = 47.0
+text = "Gallery"
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
@@ -56,6 +68,7 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Character Ui test" to="MarginContainer/VBoxContainer/Play" method="_on_character_ui_test_pressed"]
 [connection signal="pressed" from="Movement Test" to="MarginContainer/VBoxContainer/Play" method="_on_movement_test_pressed"]
+[connection signal="pressed" from="Gallery" to="MarginContainer/VBoxContainer/Play" method="_on_gallery_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="MarginContainer/VBoxContainer/Play" method="_on_settings_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="MarginContainer/VBoxContainer/Play" method="_on_quit_pressed"]
